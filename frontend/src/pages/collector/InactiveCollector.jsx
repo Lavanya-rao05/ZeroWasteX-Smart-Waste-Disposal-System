@@ -64,7 +64,7 @@ const InactiveCollectors = () => {
         }
 
         const res = await axios.get(
-          "http://localhost:5000/api/admin/inactive-collectors",
+          "https://zerowastex-smart-waste-disposal-system.onrender.com/api/admin/inactive-collectors",
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -7,7 +7,7 @@ const CenterRankings = () => {
   useEffect(() => {
     const fetchRankings = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/admin/center-rankings");
+        const { data } = await axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/admin/center-rankings");
         setRankings(data);
       } catch (error) {
         console.error("Error fetching rankings:", error);

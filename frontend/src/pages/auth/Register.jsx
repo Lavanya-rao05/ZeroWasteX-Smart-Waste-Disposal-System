@@ -23,7 +23,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://zerowastex-smart-waste-disposal-system.onrender.com/api/auth/register",
         formData
       );
 
@@ -46,7 +46,7 @@ const Register = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://zerowastex-smart-waste-disposal-system.onrender.com/api/auth/forgot-password",
         {
           method: "POST",
           headers: {

@@ -16,7 +16,7 @@ const UsageAnalytics = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:5000/api/pickup/usage", {
+      .get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/usage", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

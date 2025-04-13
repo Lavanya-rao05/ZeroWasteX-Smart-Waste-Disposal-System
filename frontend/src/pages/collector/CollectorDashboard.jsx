@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import RouteViewer from "../components/RouteViewer"; //
+import RouteViewer from "../../components/RouteViewer"; //
 import PickupHistory from "./PickupHistory";
 import CollectorStats from "./CollectorStats";
 
@@ -14,7 +14,7 @@ const CollectorDashboard = ({ collectorId }) => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:5000/api/pickup/collector",
+          "https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/collector",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -56,7 +56,7 @@ const CollectorDashboard = ({ collectorId }) => {
         parseFloat(geoRes.data[0].lat),
       ];
 
-      const routeRes = await axios.post("http://localhost:5000/api/routes", {
+      const routeRes = await axios.post("https://zerowastex-smart-waste-disposal-system.onrender.com/api/routes", {
         start: centerCoords,
         end: pickupLocation,
       });
@@ -74,7 +74,7 @@ const CollectorDashboard = ({ collectorId }) => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/pickup/complete-pickup/${id}`,
+        `https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/complete-pickup/${id}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

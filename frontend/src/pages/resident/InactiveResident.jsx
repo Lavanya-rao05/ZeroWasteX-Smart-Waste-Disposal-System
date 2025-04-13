@@ -7,7 +7,7 @@ const InactiveResidents = () => {
   useEffect(() => {
     const fetchInactiveCount = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/residents/inactive-count")
+        const res = await axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/residents/inactive-count")
         setInactiveCount(res.data.inactiveCount);
       } catch (err) {
         console.error("Failed to fetch inactive resident count:", err);

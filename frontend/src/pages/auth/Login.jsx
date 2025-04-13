@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://zerowastex-smart-waste-disposal-system.onrender.com/api/auth/login",
         formData
       );
 
@@ -41,7 +41,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://zerowastex-smart-waste-disposal-system.onrender.com/api/auth/forgot-password",
         {
           method: "POST",
           headers: {

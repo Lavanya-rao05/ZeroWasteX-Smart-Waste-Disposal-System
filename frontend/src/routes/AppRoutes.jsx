@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-import ResidentDashboard from "../pages/ResidentDashboard";
-import CollectorDashboard from "../pages/CollectorDashboard";
-import AdminDashboard from "../pages/AdminDashboard";
+import Login from "../pages/auth/Login";
+import Register from "../pages/auth/Register";
+import ResidentDashboard from "../pages/resident/ResidentDashboard";
+import CollectorDashboard from "../pages/collector/CollectorDashboard";
+import AdminDashboard from "../pages/admin/AdminDashboard";
 import ProtectedRoute from "../components/ProtectedRoute";
-import ResetPassword from "../pages/ResetPassword";
+import ResetPassword from "../pages/auth/ResetPassword";
 import "leaflet/dist/leaflet.css";
 
 

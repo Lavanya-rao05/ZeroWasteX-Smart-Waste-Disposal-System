@@ -26,10 +26,10 @@ const ResidentDashboard = () => {
       setLoading(true);
       try {
         const [addressRes, pickupRes] = await Promise.all([
-          axios.get("http://localhost:5000/api/pickup/saved-addresses", {
+          axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/saved-addresses", {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get("http://localhost:5000/api/pickup/history", {
+          axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/history", {
             headers: { Authorization: `Bearer ${token}` },
           }),
         ]);
@@ -99,7 +99,7 @@ const ResidentDashboard = () => {
       };
 
       await axios.post(
-        "http://localhost:5000/api/pickup/request-pickup",
+        "https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/request-pickup",
         requestData,
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -110,7 +110,7 @@ const ResidentDashboard = () => {
       setShowNewAddressForm(false);
 
       // Refresh pickup history
-      const res = await axios.get("http://localhost:5000/api/pickup/history", {
+      const res = await axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/history", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPickups(res.data.pickups || []);

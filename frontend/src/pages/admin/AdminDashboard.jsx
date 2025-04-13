@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import InactiveResidents from "./InactiveResident";
-import InactiveCollectors from "./InactiveCollector";
+import InactiveResidents from "../resident/InactiveResident";
+import InactiveCollectors from "../collector/InactiveCollector";
 import CenterAnalytics from "./CenterAnalytics";
 import CenterRankings from "./CenterRanking";
 import UsageAnalytics from "./UsageAnalaytics";
@@ -22,13 +22,13 @@ const AdminDashboard = () => {
     setIsLoading(true);
     try {
       const [requestsRes, userStatsRes, pickupStatsRes] = await Promise.all([
-        axios.get("http://localhost:5000/api/admin/active-pickups", {
+        axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/admin/active-pickups", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:5000/api/admin/users-stats", {
+        axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/admin/users-stats", {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get("http://localhost:5000/api/admin/pickup-stats", {
+        axios.get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/admin/pickup-stats", {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
@@ -46,7 +46,7 @@ const AdminDashboard = () => {
   const markAsComplete = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/pickups/complete-pickup/${id}`,
+        `https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickups/complete-pickup/${id}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -94,7 +94,6 @@ const AdminDashboard = () => {
 
       <UsageAnalytics />
 
-      {/* Active Pickups Table */}
       <div className="bg-white p-6 rounded-2xl shadow mb-8">
         <h3 className="text-lg font-semibold mb-4 text-gray-800">
           🚚 Active Pickup Requests

@@ -20,7 +20,7 @@ const PickupHistory = () => {
     if (!collectorId) return;
 
     axios
-      .get(`http://localhost:5000/api/pickup/${collectorId}/completed-pickups`)
+      .get(`https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/${collectorId}/completed-pickups`)
       .then((res) => setHistory(res.data))
       .catch((err) => console.error("Error:", err));
   }, [collectorId]);

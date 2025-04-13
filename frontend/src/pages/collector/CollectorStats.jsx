@@ -21,7 +21,7 @@ const CollectorStats = ({ collectorId }) => {
     const token = localStorage.getItem("token"); // or sessionStorage if you use that
   
     axios
-      .get("http://localhost:5000/api/pickup/collector/stats", {
+      .get("https://zerowastex-smart-waste-disposal-system.onrender.com/api/pickup/collector/stats", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
