@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Add in index.css */
+.leaflet-container {
+    height: 100% !important;
+    width: 100% !important;
+    z-index: 0;
+  }
+  
