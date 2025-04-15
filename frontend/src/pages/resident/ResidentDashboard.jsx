@@ -133,6 +133,7 @@ const ResidentDashboard = () => {
   };
 
   return (
+    <div className="p-8 bg-gradient-to-r from-green-200 to-green-800 min-h-screen">
     <div className="p-6 bg-white rounded-lg shadow-lg max-w-3xl mx-auto">
       <h2 className="text-2xl font-bold mb-6">Request Waste Pickup</h2>
 
@@ -308,6 +309,7 @@ const ResidentDashboard = () => {
           <p>No pickup history found.</p>
         )}
       </div>
+    </div>
     </div>
   );
 };
