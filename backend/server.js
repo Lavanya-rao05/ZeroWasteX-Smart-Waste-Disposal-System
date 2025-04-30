@@ -23,7 +23,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://zero-waste-x.netlify.app/"], // Allow frontend origin
+    origin: ["http://localhost:5173", "https://zero-waste-x.netlify.app"], // Allow frontend origin
     credentials: true, // Allow cookies and authentication headers
   })
 );
